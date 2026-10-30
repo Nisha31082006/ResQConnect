@@ -1,0 +1,31 @@
+{
+  "name": "resqconnect",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ResQConnect – Smart Disaster Response and Emergency Coordination Platform",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "engines": {
+    "node": ">=18.18.0",
+    "npm": ">=9"
+  },
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "concurrently -k -n server,client -c cyan,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "seed": "npm run seed -w server",
+    "build": "npm run build -w server && npm run build -w client",
+    "start": "npm run start -w server",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w client",
+    "lint": "npm run lint -w server && npm run lint -w client",
+    "test": "npm run test -w server && npm run test -w client",
+    "test:server": "npm run test -w server",
+    "test:client": "npm run test -w client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
