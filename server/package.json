@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc --skipLibCheck",
     "start": "node dist/index.js",
     "seed": "tsx src/scripts/seed.ts",
     "typecheck": "tsc --noEmit -p tsconfig.json",
