@@ -1,0 +1,9 @@
+export const EMERGENCY_TYPES = ['flood', 'fire', 'earthquake', 'cyclone', 'landslide', 'medical', 'trapped', 'food_water', 'shelter_needed', 'road_hazard', 'other'] as const;
+export const STATUSES = ['pending', 'acknowledged', 'assigned', 'in_progress', 'completion_submitted', 'admin_verification', 'resolved'] as const;
+export const PRIORITIES = ['critical', 'high', 'medium', 'low'] as const;
+export const SEVERITIES = ['low', 'medium', 'high', 'severe'] as const;
+export const BLOCKAGE_TYPES = ['flooded', 'landslide', 'fallen_tree', 'collapsed_bridge', 'debris', 'damaged_road', 'other'] as const;
+export const FACILITIES = ['water', 'food', 'medical', 'toilets', 'power', 'bedding', 'wheelchair_access', 'pet_friendly', 'women_children_area'] as const;
+export const VULNERABLE = ['children', 'elderly', 'disabled', 'pregnant', 'injured'] as const;
+export const ASSISTANCE = ['drinking_water', 'food', 'medical_aid', 'evacuation', 'shelter', 'blankets', 'transport'] as const;
+export const ROLES = ['citizen', 'volunteer', 'team_leader', 'admin', 'food_provider', 'shelter_coordinator'] as const;

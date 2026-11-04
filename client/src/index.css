@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply text-ink-900 bg-ink-50; }
+  :focus-visible { outline: 3px solid #1d4ed8; outline-offset: 2px; }
+}
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-brand-600 text-white hover:bg-brand-700; }
+  .btn-secondary { @apply btn bg-white text-ink-900 border border-ink-300 hover:bg-ink-100; }
+  .btn-danger { @apply btn bg-ink-900 text-white hover:bg-black; }
+  .btn-ghost { @apply btn text-ink-700 hover:bg-ink-100; }
+  .input { @apply w-full rounded-lg border border-ink-300 bg-white px-3 py-2 text-sm placeholder:text-ink-500 focus:border-brand-600; }
+  .input-error { @apply border-red-600 bg-red-50; }
+  .card { @apply rounded-xl border border-ink-200 bg-white shadow-sm; }
+  .label { @apply mb-1 block text-sm font-medium text-ink-700; }
+  .th { @apply px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide text-ink-500; }
+  .td { @apply px-3 py-2 text-sm align-top; }
+}
+.leaflet-container { font-family: inherit; }
+@keyframes sosPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(185,28,28,.55);} 50% { box-shadow: 0 0 0 10px rgba(185,28,28,0);} }
+.sos-pulse { animation: sosPulse 1.6s infinite; }
+@media (prefers-reduced-motion: reduce) { .sos-pulse { animation: none; } }
